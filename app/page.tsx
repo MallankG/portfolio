@@ -43,17 +43,13 @@ const sampleApps = [
 ];
 
 const DockDemo: React.FC = () => {
-  const [openApps, setOpenApps] = useState<string[]>(['home', 'socials']);
+  const [openApps, setOpenApps] = useState<string[]>(['home']);
 
   const handleAppClick = (appId: string) => {
     console.log('App clicked:', appId);
 
-    // Toggle app in openApps array
-    setOpenApps(prev =>
-      prev.includes(appId)
-        ? prev.filter(id => id !== appId)
-        : [...prev, appId]
-    );
+    // Set only the clicked app as open
+    setOpenApps([appId]);
   };
 
   return (
