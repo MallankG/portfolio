@@ -293,7 +293,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
                 width: `${scaledSize}px`,
                 height: `${scaledSize}px`,
                 transformOrigin: 'bottom center',
-                zIndex: Math.round(scale * 10)
+                zIndex: Number.isNaN(scale) ? 1 : Math.round(scale * 10)
               }}
             >
               {hoveredApp === app.id && (
