@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.17.12",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "@paper-design/shaders-react": "^0.0.69",
     "@react-three/fiber": "^9.5.0",
     "@types/three": "^0.182.0",

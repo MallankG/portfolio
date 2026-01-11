@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import MacOSDock from '../components/ui/mac-os-dock';
 import ShaderBackground from '../components/ui/shader-background';
+import WelcomeAnimation from '../components/ui/welcome-animation';
 import {
     HomeSection,
     ProjectsSection,
@@ -110,6 +111,9 @@ const DockDemo: React.FC = () => {
             overflow: 'hidden',
             position: 'relative',
         }}>
+            {/* Welcome Animation - shows on initial load */}
+            <WelcomeAnimation />
+
             {/* Persistent Shader Background - colors transition smoothly */}
             <ShaderBackground
                 colors={currentColors.colors}
