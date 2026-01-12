@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Mallank Gogri's Portfolio",
   description: "Personal portfolio website",
 };
 
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${outfit.variable} antialiased`}>
         {children}
       </body>
     </html>

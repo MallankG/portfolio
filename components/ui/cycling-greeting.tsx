@@ -10,8 +10,8 @@ interface CyclingGreetingProps {
 type AnimationPhase = 'typing' | 'pause' | 'deleting';
 
 const texts = [
-    "Hello, my name is Mallank Gogri",
-    "Fullstack Developer · AI/ML Enthusiast"
+    "Hello, I am Mallank Gogri !",
+    "Fullstack Developer · AI/ML Enthusiast · Dreamer"
 ];
 
 export function CyclingGreeting({ className }: CyclingGreetingProps) {
