@@ -5,7 +5,14 @@ import dynamic from "next/dynamic";
 // Dynamic import for IconCloud with SSR disabled
 const IconCloud = dynamic(
     () => import("../ui/interactive-icon-cloud").then((mod) => mod.IconCloud),
-    { ssr: false }
+    {
+        ssr: false,
+        loading: () => (
+            <div className="flex items-center justify-center w-full h-[600px] animate-pulse">
+                <div className="w-32 h-32 rounded-full bg-white/10 blur-xl"></div>
+            </div>
+        )
+    }
 );
 
 // Skills for the icon cloud

@@ -79,6 +79,14 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
         )
     }, [data, theme])
 
+    if (!data) {
+        return (
+            <div className="flex items-center justify-center w-full h-[600px] animate-pulse">
+                <div className="w-32 h-32 rounded-full bg-white/10 blur-xl"></div>
+            </div>
+        )
+    }
+
     return (
         // @ts-ignore
         <Cloud {...cloudProps}>
