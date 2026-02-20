@@ -1,15 +1,14 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useRef, useCallback } from 'react';
 import MacOSDock from '../components/ui/mac-os-dock';
-import ShaderBackground from '../components/ui/shader-background';
 import WelcomeAnimation from '../components/ui/welcome-animation';
 import {
     HomeSection,
     ProjectsSection,
     SkillsSection,
     ExperienceSection,
-    ResumeSection,
+    AchievementsSection,
     ContactSection
 } from '../components/sections';
 
@@ -36,9 +35,9 @@ const sampleApps = [
         icon: 'https://cdn.jim-nielsen.com/macos/1024/calendar-2021-04-29.png?rf=1024'
     },
     {
-        id: 'resume',
-        name: 'Resume',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/notes-2021-05-25.png?rf=1024'
+        id: 'achievements',
+        name: 'Achievements',
+        icon: 'https://cdn.jim-nielsen.com/macos/1024/reminders-2021-05-28.png?rf=1024'
     },
     {
         id: 'contact',
@@ -47,33 +46,8 @@ const sampleApps = [
     }
 ];
 
-// Color schemes for each section
-const sectionColors: Record<string, { colors: string[], speed: number }> = {
-    home: {
-        colors: ["#000000", "#1e1b4b", "#4338ca", "#818cf8"], // Indigo/Purple
-        speed: 0.8
-    },
-    projects: {
-        colors: ["#000000", "#4a044e", "#db2777", "#fb923c"], // Pink/Orange
-        speed: 1.0
-    },
-    skills: {
-        colors: ["#000000", "#064e3b", "#10b981", "#22d3ee"], // Emerald/Cyan
-        speed: 1.2
-    },
-    experience: {
-        colors: ["#000000", "#451a03", "#f59e0b", "#fde047"], // Amber/Yellow
-        speed: 0.9
-    },
-    resume: {
-        colors: ["#000000", "#1e3a5f", "#3b82f6", "#93c5fd"], // Blue
-        speed: 0.7
-    },
-    contact: {
-        colors: ["#000000", "#4c0519", "#e11d48", "#fda4af"], // Red/Rose
-        speed: 1.1
-    }
-};
+// Section order for rendering
+const sectionOrder = ['home', 'projects', 'skills', 'experience', 'achievements', 'contact'];
 
 // Map section IDs to their components
 const sectionComponents: Record<string, React.FC> = {
@@ -81,52 +55,43 @@ const sectionComponents: Record<string, React.FC> = {
     projects: ProjectsSection,
     skills: SkillsSection,
     experience: ExperienceSection,
-    resume: ResumeSection,
+    achievements: AchievementsSection,
     contact: ContactSection,
 };
 
-const DockDemo: React.FC = () => {
-    const [activeSection, setActiveSection] = useState<string>('home');
-    const [openApps, setOpenApps] = useState<string[]>(['home']);
+const Portfolio: React.FC = () => {
+    const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
-    const handleAppClick = (appId: string) => {
-        console.log('App clicked:', appId);
-        setActiveSection(appId);
-        setOpenApps([appId]);
-    };
-
-    const ActiveSectionComponent = sectionComponents[activeSection] || HomeSection;
-
-    // Get current section's color scheme
-    const currentColors = useMemo(() => {
-        return sectionColors[activeSection] || sectionColors.home;
-    }, [activeSection]);
+    // Scroll to section when dock icon is clicked
+    const handleAppClick = useCallback((appId: string) => {
+        const sectionEl = sectionRefs.current[appId];
+        if (sectionEl) {
+            sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, []);
 
     return (
-        <div style={{
-            height: '100vh',
-            width: '100vw',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden',
-            position: 'relative',
-        }}>
+        <div className="notebook-page">
             {/* Welcome Animation - shows on initial load */}
             <WelcomeAnimation />
 
-            {/* Persistent Shader Background - colors transition smoothly */}
-            <ShaderBackground
-                colors={currentColors.colors}
-                speed={currentColors.speed}
-            />
+            {/* Notebook Background */}
+            <div className="notebook-bg" aria-hidden="true" />
 
-            {/* Active Section Content */}
-            <div style={{
-                flex: 1,
-                overflow: 'auto',
-                paddingBottom: '100px',
-            }}>
-                <ActiveSectionComponent />
+            {/* All Sections Content */}
+            <div className="notebook-content">
+                {sectionOrder.map((sectionId) => {
+                    const SectionComponent = sectionComponents[sectionId];
+                    return (
+                        <div
+                            key={sectionId}
+                            id={sectionId}
+                            ref={(el) => { sectionRefs.current[sectionId] = el; }}
+                        >
+                            <SectionComponent />
+                        </div>
+                    );
+                })}
             </div>
 
             {/* The Dock Component */}
@@ -140,11 +105,11 @@ const DockDemo: React.FC = () => {
                 <MacOSDock
                     apps={sampleApps}
                     onAppClick={handleAppClick}
-                    openApps={openApps}
+                    openApps={[]}
                 />
             </div>
         </div>
     );
 };
 
-export default DockDemo;
+export default Portfolio;

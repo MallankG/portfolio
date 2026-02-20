@@ -1,61 +1,352 @@
-@layer base {
-    * {
-        @apply border-border outline-ring/50;
-    }
+/* ==========================================
+   NOTEPAD THEME — All Styles
+   ========================================== */
 
-    body {
-        @apply bg-background text-foreground;
-    }
-}
+/* ---- Page Structure ---- */
 
-/* Section Styles */
-.section-container {
+.notebook-page {
+    position: relative;
     min-height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.section-content {
-    position: relative;
-    z-index: 10;
-    max-width: 1200px;
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
+.notebook-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: #fdf6e3;
+    background-image:
+        linear-gradient(90deg, transparent 79px, #e8a0a0 79px, #e8a0a0 81px, transparent 81px),
+        linear-gradient(#c8d6e5 1px, transparent 1px);
+    background-size: 100% 32px;
 }
 
-.section-title {
-    font-size: 4rem;
+.notebook-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.notebook-bg::after {
+    content: '';
+    position: fixed;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background-image: radial-gradient(circle 5px at center, rgba(180, 180, 180, 0.3) 5px, transparent 5px);
+    background-size: 12px 400px;
+    background-position: center 60px;
+    pointer-events: none;
+}
+
+.notebook-content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+}
+
+/* ---- Notepad Section ---- */
+
+.notepad-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.5rem 6rem 0;
+}
+
+.notepad-section:first-child {
+    padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .notepad-section {
+        padding: 0.5rem 1.5rem 0;
+    }
+
+    .notepad-section:first-child {
+        padding-top: 1.5rem;
+    }
+}
+
+/* ---- Typography ---- */
+
+.notepad-heading {
+    font-family: var(--font-outfit), 'Georgia', serif;
+    font-size: 1.75rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.7) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
-}
-
-.section-description {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    line-height: 1.8;
-}
-
-.section-highlight {
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 0.4rem;
     display: inline-block;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.highlight-text {
-    color: #fff;
+.notepad-subheading {
+    font-size: 1rem;
+    color: #5d6d7e;
+    margin-top: 0.15rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.notepad-label {
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+}
+
+.notepad-text {
+    font-size: 0.95rem;
+    color: #34495e;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.notepad-key {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* ---- Blocks & Entries ---- */
+
+.notepad-block {
+    margin-bottom: 0.75rem;
+}
+
+.notepad-block:last-child {
+    margin-bottom: 0;
+}
+
+.notepad-divider {
+    border: none;
+    border-top: 1px dashed rgba(44, 62, 80, 0.2);
+    margin: 0.5rem 0;
+}
+
+.notepad-entry {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted rgba(44, 62, 80, 0.12);
+}
+
+.notepad-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.notepad-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.notepad-entry-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 0.2rem 0;
+}
+
+.notepad-entry-meta {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 0;
+}
+
+/* ---- Lists ---- */
+
+.notepad-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0;
+}
+
+.notepad-list li {
+    font-size: 0.95rem;
+    color: #34495e;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.notepad-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+/* ---- Skills Row ---- */
+
+.notepad-skill-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.05);
+    font-size: 0.95rem;
+}
+
+.notepad-skill-row:last-child {
+    border-bottom: none;
+}
+
+.notepad-skill-row .notepad-key {
+    min-width: 100px;
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* ---- Contact Section ---- */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(231, 76, 60, 0.2);
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.contact-info-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.contact-info-value {
+    font-size: 0.95rem;
+    color: #2c3e50;
     font-weight: 500;
+    word-break: break-word;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.notepad-form-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.notepad-form-row label {
+    min-width: 65px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    flex-shrink: 0;
+}
+
+.notepad-form-row input,
+.notepad-form-row textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.2);
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    color: #34495e;
+    outline: none;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.notepad-form-row input:focus,
+.notepad-form-row textarea:focus {
+    border-bottom-color: #e74c3c;
+}
+
+.notepad-form-row input::placeholder,
+.notepad-form-row textarea::placeholder {
+    color: #bdc3c7;
+    font-style: italic;
+}
+
+.notepad-btn {
+    align-self: flex-start;
+    padding: 0.4rem 1.25rem;
+    background: #2c3e50;
+    border: none;
+    color: #fdf6e3;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 0.4rem;
+    letter-spacing: 0.02em;
+}
+
+.notepad-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.notepad-status-ok {
+    color: #27ae60;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+.notepad-status-err {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+/* ---- Links ---- */
+
+.notepad-link {
+    color: #3498db;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-col {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px dashed rgba(44, 62, 80, 0.15);
+        padding-top: 1rem;
+    }
 }

@@ -1,14 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
-// Dynamic import with SSR disabled
-const DotLottieReact = dynamic(
-    () => import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
-    { ssr: false }
-);
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -31,9 +23,7 @@ export default function ContactSection() {
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
@@ -44,120 +34,65 @@ export default function ContactSection() {
             } else {
                 setStatus("error");
             }
-        } catch (error) {
+        } catch {
             setStatus("error");
         }
     };
 
     return (
-        <div className="section-container">
-            <div className="section-content">
-                <h1 className="section-title">Get In Touch</h1>
+        <div className="notepad-section">
+            <h1 className="notepad-heading">Get In Touch</h1>
+            <p className="notepad-subheading">
+                Open to internships, projects, and new opportunities — let&apos;s connect.
+            </p>
 
-                <div className="contact-two-column">
-                    <div className="contact-text-column">
-                        <p className="contact-invite">
-                            I am currently open to internships, projects, and new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-                        </p>
-                        <div className="contact-container">
-                            <form className="contact-form" onSubmit={handleSubmit}>
-                                <div className="form-group">
-                                    <label htmlFor="name">Name</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        placeholder="Your name"
-                                        required
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        placeholder="your@email.com"
-                                        required
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="subject">Subject</label>
-                                    <input
-                                        type="text"
-                                        id="subject"
-                                        placeholder="What is this regarding?"
-                                        required
-                                        value={formData.subject}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="message">Message</label>
-                                    <textarea
-                                        id="message"
-                                        placeholder="Your message..."
-                                        rows={3}
-                                        required
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                    />
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="submit-btn"
-                                    style={{ marginTop: "0.25rem" }}
-                                    disabled={status === "submitting"}
-                                >
-                                    {status === "submitting" ? "Sending..." : "Send Message"}
-                                </button>
-                                {status === "success" && (
-                                    <p className="status-message success">Message sent successfully!</p>
-                                )}
-                                {status === "error" && (
-                                    <p className="status-message error">Failed to send message. Please try again.</p>
-                                )}
-                            </form>
-
-                            <div className="contact-bottom-section">
-                                <div className="contact-info-small">
-                                    <div className="info-item-small">
-                                        <span className="info-label-small">Email</span>
-                                        <span className="info-value-small">mallankgogri1@gmailcom</span>
-                                    </div>
-                                    <div className="info-item-small">
-                                        <span className="info-label-small">Location</span>
-                                        <span className="info-value-small">Mumbai, India</span>
-                                    </div>
-                                </div>
-
-                                <div className="socials-container">
-                                    <p className="connect-invite">Let's connect!</p>
-                                    <div className="socials-row">
-                                        <a href="https://github.com/mallankg" target="_blank" rel="noopener noreferrer" className="social-link github" aria-label="GitHub">
-                                            <FaGithub />
-                                        </a>
-                                        <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="social-link linkedin" aria-label="LinkedIn">
-                                            <FaLinkedin />
-                                        </a>
-                                        <a href="https://twitter.com/mallankg" target="_blank" rel="noopener noreferrer" className="social-link twitter" aria-label="Twitter">
-                                            <FaTwitter />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div className="contact-grid">
+                {/* Left: Form */}
+                <form className="contact-form-col" onSubmit={handleSubmit}>
+                    <div className="notepad-form-row">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name" required value={formData.name} onChange={handleChange} />
                     </div>
+                    <div className="notepad-form-row">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder="you@example.com" required value={formData.email} onChange={handleChange} />
+                    </div>
+                    <div className="notepad-form-row">
+                        <label htmlFor="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="What's this about?" required value={formData.subject} onChange={handleChange} />
+                    </div>
+                    <div className="notepad-form-row">
+                        <label htmlFor="message">Message</label>
+                        <textarea id="message" placeholder="Write your message here..." rows={3} required value={formData.message} onChange={handleChange} />
+                    </div>
+                    <button type="submit" className="notepad-btn" disabled={status === "submitting"}>
+                        {status === "submitting" ? "Sending..." : "Send Message"}
+                    </button>
+                    {status === "success" && <p className="notepad-status-ok">✓ Sent! I&apos;ll get back to you soon.</p>}
+                    {status === "error" && <p className="notepad-status-err">✗ Something went wrong. Try again.</p>}
+                </form>
 
-                    <div className="contact-lottie-column">
-                        <DotLottieReact
-                            src="https://lottie.host/be052cdf-53ff-426b-99fa-87d464ae29c1/44SuNuSYNG.lottie"
-                            loop
-                            autoplay
-                            style={{ width: "100%", height: "100%" }}
-                        />
+                {/* Right: Info */}
+                <div className="contact-info-col">
+                    <div className="contact-info-item">
+                        <span className="contact-info-label">Email</span>
+                        <span className="contact-info-value">mallankgogri1@gmail.com</span>
+                    </div>
+                    <div className="contact-info-item">
+                        <span className="contact-info-label">Location</span>
+                        <span className="contact-info-value">Mumbai, India</span>
+                    </div>
+                    <div className="contact-info-item">
+                        <span className="contact-info-label">Availability</span>
+                        <span className="contact-info-value">Open to opportunities</span>
+                    </div>
+                    <div className="contact-info-item">
+                        <span className="contact-info-label">Connect</span>
+                        <div className="contact-links">
+                            <a href="https://github.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link">GitHub</a>
+                            <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="notepad-link">LinkedIn</a>
+                            <a href="https://twitter.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link">Twitter</a>
+                        </div>
                     </div>
                 </div>
             </div>

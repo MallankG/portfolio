@@ -139,6 +139,8 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
   }, [apps, calculatePositions, minScale, config]);
 
   // Animation loop
+  const animateToTargetRef = useRef<(() => void) | null>(null);
+
   const animateToTarget = useCallback(() => {
     const targetScales = calculateTargetMagnification(mouseX);
     const targetPositions = calculatePositions(targetScales);
@@ -166,9 +168,15 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
     );
 
     if (scalesNeedUpdate || positionsNeedUpdate || mouseX !== null) {
-      animationFrameRef.current = requestAnimationFrame(animateToTarget);
+      if (animateToTargetRef.current) {
+        animationFrameRef.current = requestAnimationFrame(animateToTargetRef.current);
+      }
     }
   }, [mouseX, calculateTargetMagnification, calculatePositions, currentScales, currentPositions]);
+
+  useEffect(() => {
+    animateToTargetRef.current = animateToTarget;
+  }, [animateToTarget]);
 
   // Start/stop animation loop
   useEffect(() => {
@@ -218,7 +226,9 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
 
   const handleAppClick = (appId: string, index: number) => {
     if (iconRefs.current[index]) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       if (typeof window !== 'undefined' && (window as any).gsap) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const gsap = (window as any).gsap;
         const bounceHeight = currentScales[index] > 1.3 ? -baseIconSize * 0.2 : -baseIconSize * 0.15;
 
@@ -309,6 +319,7 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
                   {app.name}
                 </div>
               )}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={app.icon}
                 alt={app.name}

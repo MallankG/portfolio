@@ -23,13 +23,12 @@ const WelcomeAnimation: React.FC<WelcomeAnimationProps> = ({
         const hasSeenAnimation = sessionStorage.getItem('hasSeenWelcome');
 
         if (hasSeenAnimation) {
-            setShouldHide(true);
             onComplete?.();
-            setHasCheckedSession(true);
+            setTimeout(() => setHasCheckedSession(true), 0);
             return;
         }
 
-        setHasCheckedSession(true);
+        setTimeout(() => setHasCheckedSession(true), 0);
 
         // Set timer to start exit animation
         const exitTimer = setTimeout(() => {
@@ -59,7 +58,7 @@ const WelcomeAnimation: React.FC<WelcomeAnimationProps> = ({
     };
 
     // Hide if already seen (after check) or after animation completes
-    if (shouldHide && hasCheckedSession) return null;
+    if ((shouldHide && hasCheckedSession) || (hasCheckedSession && sessionStorage.getItem('hasSeenWelcome') === 'true')) return null;
 
     return (
         <AnimatePresence mode="wait">
