@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 export default function ContactSection() {
     const [formData, setFormData] = useState({
@@ -89,9 +90,15 @@ export default function ContactSection() {
                     <div className="contact-info-item">
                         <span className="contact-info-label">Connect</span>
                         <div className="contact-links">
-                            <a href="https://github.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link">GitHub</a>
-                            <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="notepad-link">LinkedIn</a>
-                            <a href="https://twitter.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link">Twitter</a>
+                            <a href="https://github.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link" title="GitHub" style={{ display: "flex", alignItems: "center", padding: "0.25rem" }}>
+                                <Github size={20} />
+                            </a>
+                            <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="notepad-link" title="LinkedIn" style={{ display: "flex", alignItems: "center", padding: "0.25rem" }}>
+                                <Linkedin size={20} />
+                            </a>
+                            <a href="https://twitter.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link" title="Twitter" style={{ display: "flex", alignItems: "center", padding: "0.25rem" }}>
+                                <Twitter size={20} />
+                            </a>
                         </div>
                     </div>
                 </div>
