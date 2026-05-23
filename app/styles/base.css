@@ -210,31 +210,21 @@
 
 /* ---- Contact Section ---- */
 
-.contact-grid {
+.contact-info-single {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.contact-form-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-}
-
-.contact-info-col {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-left: 1.5rem;
-    border-left: 2px solid rgba(231, 76, 60, 0.2);
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(44, 62, 80, 0.02);
+    border-radius: 6px;
+    border: 1px dashed rgba(44, 62, 80, 0.15);
 }
 
 .contact-info-item {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0.25rem;
 }
 
 .contact-info-label {
@@ -259,74 +249,16 @@
     margin-top: 0.25rem;
 }
 
-.notepad-form-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-}
-
-.notepad-form-row label {
-    min-width: 65px;
-    font-weight: 700;
-    font-size: 0.85rem;
+.notepad-link-email {
     color: #2c3e50;
-    flex-shrink: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.notepad-form-row input,
-.notepad-form-row textarea {
-    flex: 1;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(44, 62, 80, 0.2);
-    padding: 0.35rem 0;
-    font-size: 0.9rem;
-    color: #34495e;
-    outline: none;
-    font-family: inherit;
-    resize: vertical;
-}
-
-.notepad-form-row input:focus,
-.notepad-form-row textarea:focus {
-    border-bottom-color: #e74c3c;
-}
-
-.notepad-form-row input::placeholder,
-.notepad-form-row textarea::placeholder {
-    color: #bdc3c7;
-    font-style: italic;
-}
-
-.notepad-btn {
-    align-self: flex-start;
-    padding: 0.4rem 1.25rem;
-    background: #2c3e50;
-    border: none;
-    color: #fdf6e3;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 3px;
-    margin-top: 0.4rem;
-    letter-spacing: 0.02em;
-}
-
-.notepad-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.notepad-status-ok {
-    color: #27ae60;
-    font-size: 0.85rem;
-    margin-top: 0.4rem;
-}
-
-.notepad-status-err {
+.notepad-link-email:hover {
     color: #e74c3c;
-    font-size: 0.85rem;
-    margin-top: 0.4rem;
 }
 
 /* ---- Links ---- */
@@ -336,17 +268,4 @@
     text-decoration: underline;
     text-underline-offset: 2px;
     font-weight: 500;
-}
-
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info-col {
-        padding-left: 0;
-        border-left: none;
-        border-top: 1px dashed rgba(44, 62, 80, 0.15);
-        padding-top: 1rem;
-    }
 }
