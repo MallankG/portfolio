@@ -4,9 +4,15 @@ import { Github, ExternalLink, FileText } from "lucide-react";
 
 const projects = [
     {
+        name: "Zirccle",
+        tech: "Python · FastAPI · PostgreSQL · Redis · React Native · Expo · TypeScript · PyTorch · scikit-learn · Docker · AWS",
+        description: "Architected a FastAPI/PostgreSQL backend supporting 123 API operations across 101 paths and 36 database models/tables. Built Redis-backed worker queues for ML inference, reaching 176.6 requests/sec at 5.16s P95 latency across 1,040 requests, and developed React Native networking with SWR/ETag caching, request coalescing, exponential backoff, and optimistic updates.",
+        github: "https://github.com/MallankG",
+    },
+    {
         name: "Puch.AI",
         tech: "React · TypeScript · Node.js · Express · MongoDB · Google OAuth · Twilio · Groq AI · Vercel",
-        description: "Built an AI-driven email automation platform integrating Gmail OAuth and Groq AI to classify subscriptions and automate inbox actions such as archiving, labelling, and replies across user inboxes. Implemented email parsing, daily summaries, OTP-based authentication via Twilio, and rule-based automation, significantly improving inbox productivity and reducing repetitive manual effort.",
+        description: "Built an AI-driven email automation platform integrating Gmail OAuth and Groq AI to classify subscriptions and automate inbox management. Engineered four workflows for email parsing, daily summaries, OTP verification, and rule-based actions, integrating 5+ APIs with Node.js, Express, and MongoDB.",
         github: "https://github.com/MallankG/puch-inbox-frontend",
         link: "https://puch-inbox.vercel.app/"
     },
@@ -19,10 +25,10 @@ const projects = [
 
 const publications = [
     {
-        title: "Transfer Learning for Lung Disease Classification using CNNs",
-        detail: "Authored a research paper on a deep learning–based diagnostic system for chest X-ray classification. Fine-tuned 16 pretrained CNNs with an ensemble approach achieving 96.6% accuracy and 0.97 F1-score. Under review: Springer Nature Computer Science Journal.",
-        tags: "Deep Learning, CNN, Medical AI",
-        github: "https://github.com/MallankG/Lung-Disease-Classification",
+        title: "Knowledge Graph Augmented Multilingual Benchmark for Factual LLM Evaluation",
+        detail: "Developing a multilingual benchmark for evaluating LLM factuality with knowledge graphs across Indic languages, domains, and real-world knowledge settings. Accepted for presentation at MAI-2026 and to be published in Springer LN EE proceedings.",
+        tags: "LLM Evaluation, Knowledge Graphs, Multilingual AI",
+        github: "https://github.com/MallankG",
         link: ""
     },
     {

@@ -4,35 +4,34 @@ export default function HomeSection() {
     return (
         <div className="notepad-section">
             <h1 className="notepad-heading">Mallank Gogri</h1>
-            <p className="notepad-subheading">Fullstack Developer · AI/ML Enthusiast · Dreamer</p>
+            <p className="notepad-subheading">Software Engineer · AI/ML Builder · USC MS Computer Science</p>
 
             <div className="notepad-divider" />
 
             <div className="notepad-block">
                 <h2 className="notepad-label">About Me</h2>
                 <p className="notepad-text">
-                    Hey there! I&apos;m a full-stack developer with a passion for building elegant,
-                    user-centric applications that solve real-world problems. My journey in tech
-                    started with curiosity and has evolved into a deep love for crafting seamless
-                    digital experiences. When I&apos;m not coding, you&apos;ll find me experimenting
-                    with creative side projects, or keeping up with the latest in tech innovation.
+                    I&apos;m a software engineer focused on building reliable, intelligent systems
+                    across AI/ML, full-stack applications, and developer tooling. I enjoy turning
+                    research ideas into useful products, from real-time financial analytics to
+                    computer vision and agentic workflows.
                 </p>
             </div>
 
             <div className="notepad-block">
                 <h2 className="notepad-label">Quick Info</h2>
                 <ul className="notepad-list">
-                    <li><span className="notepad-key">📍 Location:</span> Mumbai, India</li>
-                    <li><span className="notepad-key">🎓 Focus:</span> Full-Stack & AI</li>
-                    <li><span className="notepad-key">💡 Status:</span> Open to Work</li>
-                    <li><span className="notepad-key">🚀 Passion:</span> Building Cool Stuff</li>
+                    <li><span className="notepad-key">📍 Location:</span> Los Angeles, CA</li>
+                    <li><span className="notepad-key">🎓 Education:</span> MS Computer Science, USC</li>
+                    <li><span className="notepad-key">💡 Focus:</span> AI/ML, distributed systems, full-stack engineering</li>
+                    <li><span className="notepad-key">🚀 Status:</span> Open to opportunities</li>
                 </ul>
             </div>
 
             <div className="notepad-block">
                 <h2 className="notepad-label">Hobbies</h2>
                 <p className="notepad-text">
-                    Music · Gaming · Vibe Coding · Learning · Sports · Cooking
+                    Research · Building products · Learning · Music · Gaming
                 </p>
             </div>
         </div>

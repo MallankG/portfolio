@@ -3,49 +3,25 @@
 const experiences = [
     {
         year: "2025",
-        role: "AI Engineer Intern",
+        role: "Software Engineer Intern",
         company: "Quickyearning Pvt. Ltd.",
         period: "Jul 2025 – Sept 2025",
-        summary: "Built scalable data pipelines and enhanced frontend performance for AI-driven analytics.",
+        summary: "Built AI analytics and multi-agent stock prediction systems for real-time financial insights across NSE and BSE market data.",
         bullets: [
-            "Built scalable data pipelines using Python, Pandas, and FastAPI reducing latency to 150ms",
-            "Migrated modular React architecture to Next.js with SSR, enhancing performance",
-            "Orchestrated state management overhaul from Redux to Zustand",
-            "Integrated advanced charting with live Web-Socket API",
+            "Built scalable AI analytics pipelines using Python, Pandas, and FastAPI, achieving 150ms P80 latency",
+            "Developed a multi-agent stock prediction system using LangChain, Hugging Face, LSTM, and FinBERT",
+            "Migrated modular React architecture to Next.js with SSR and replaced Redux with Zustand",
         ],
-        skills: "Python, FastAPI, Next.js, Zustand, WebSocket",
-    },
-    {
-        year: "2025",
-        role: "Software Engineer Intern",
-        company: "Theta Sound",
-        period: "Feb 2025 – Jul 2025",
-        summary: "Worked on real-time stress detection and therapeutic sound systems using ML and Cloud technologies.",
-        bullets: [
-            "Conducted real-time stress detection using earbud biometrics",
-            "Architected spatiotemporal learning algorithm for task automation",
-            "Designed system utilizing cloud functions and Web Audio API",
-            "Implemented low-latency therapeutic sound delivery",
-        ],
-        skills: "ML Models, Cloud Functions, Web Audio API, Python, System Design",
-    },
-    {
-        year: "2022",
-        role: "B.Tech in Information Technology",
-        company: "Dwarkadas J. Sanghvi College of Engineering",
-        period: "2022 – 2026",
-        summary: "Pursuing Bachelor of Technology in Information Technology with Distinction. CGPA: 9.07. 5+ Hackathons. 2 Research Papers.",
-        bullets: [],
-        skills: "",
+        skills: "Python, Pandas, FastAPI, LangChain, Hugging Face, LSTM, FinBERT, Next.js, Zustand, WebSocket",
     },
 ];
 
 export default function ExperienceSection() {
     return (
         <div className="notepad-section">
-            <h1 className="notepad-heading">Experience</h1>
+            <h1 className="notepad-heading">Professional Experience</h1>
             <p className="notepad-text" style={{ marginBottom: '0.5rem' }}>
-                A journey through my professional career, from eager student to senior developer.
+                A record of the systems and engineering work shaping my practice in AI and software.
             </p>
 
             {experiences.map((exp, i) => (

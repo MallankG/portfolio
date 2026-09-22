@@ -5,9 +5,10 @@ import MacOSDock from '../components/ui/mac-os-dock';
 import WelcomeAnimation from '../components/ui/welcome-animation';
 import {
     HomeSection,
-    ProjectsSection,
+    EducationSection,
     SkillsSection,
     ExperienceSection,
+    ProjectsSection,
     AchievementsSection,
     ContactSection
 } from '../components/sections';
@@ -20,9 +21,9 @@ const sampleApps = [
         icon: 'https://cdn.jim-nielsen.com/macos/1024/finder-2021-09-10.png?rf=1024'
     },
     {
-        id: 'projects',
-        name: 'Projects',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/photos-2021-05-28.png?rf=1024'
+        id: 'education',
+        name: 'Education',
+        icon: 'https://cdn.jim-nielsen.com/macos/1024/notes-2021-05-28.png?rf=1024'
     },
     {
         id: 'skills',
@@ -33,6 +34,11 @@ const sampleApps = [
         id: 'experience',
         name: 'Experience',
         icon: 'https://cdn.jim-nielsen.com/macos/1024/calendar-2021-04-29.png?rf=1024'
+    },
+    {
+        id: 'projects',
+        name: 'Projects',
+        icon: 'https://cdn.jim-nielsen.com/macos/1024/photos-2021-05-28.png?rf=1024'
     },
     {
         id: 'achievements',
@@ -47,14 +53,15 @@ const sampleApps = [
 ];
 
 // Section order for rendering
-const sectionOrder = ['home', 'projects', 'skills', 'experience', 'achievements', 'contact'];
+const sectionOrder = ['home', 'education', 'skills', 'experience', 'projects', 'achievements', 'contact'];
 
 // Map section IDs to their components
 const sectionComponents: Record<string, React.FC> = {
     home: HomeSection,
-    projects: ProjectsSection,
+    education: EducationSection,
     skills: SkillsSection,
     experience: ExperienceSection,
+    projects: ProjectsSection,
     achievements: AchievementsSection,
     contact: ContactSection,
 };

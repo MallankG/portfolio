@@ -1,4 +1,5 @@
 export { default as HomeSection } from "./home-section";
+export { default as EducationSection } from "./education-section";
 export { default as ProjectsSection } from "./projects-section";
 export { default as SkillsSection } from "./skills-section";
 export { default as ExperienceSection } from "./experience-section";

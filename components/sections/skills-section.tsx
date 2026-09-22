@@ -1,11 +1,11 @@
 "use client";
 
 const skillCategories = [
-    { name: "Languages", skills: "JavaScript, Python, Java, C++, C" },
-    { name: "Frameworks", skills: "PyTorch, FastAPI, Flask, RestAPI, Next.js, Express.js, React, Node.js" },
-    { name: "Libraries", skills: "NumPy, Pandas, scikit-learn, PyTorch, Matplotlib, Seaborn, Plotly" },
-    { name: "Databases", skills: "Pinecone, MongoDB, PostgreSQL, Supabase, Redis" },
-    { name: "Tools", skills: "Git, GitHub, Docker, VS Code, Cursor, Google Colab, Postman, Kaggle" },
+    { name: "Languages", skills: "Python, JavaScript, TypeScript, Java, C++, C, SQL" },
+    { name: "AI/ML", skills: "PyTorch, LangChain, Hugging Face, scikit-learn, RAG, Generative AI" },
+    { name: "Frameworks", skills: "FastAPI, Next.js, React, Node.js, Express.js" },
+    { name: "Databases", skills: "PostgreSQL, MongoDB, Supabase, Redis, Pinecone" },
+    { name: "Cloud/DevOps & Tools", skills: "AWS, Docker, GitHub Actions, Git, GitHub, VS Code, Cursor, Postman, Kaggle, Codex" },
 ];
 
 export default function SkillsSection() {

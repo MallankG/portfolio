@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Download, Github, Linkedin } from "lucide-react";
 
 export default function ContactSection() {
     return (
@@ -14,14 +14,18 @@ export default function ContactSection() {
                 <div className="contact-info-item">
                     <span className="contact-info-label">Email</span>
                     <span className="contact-info-value">
-                        <a href="mailto:mallankgogri1@gmail.com" className="notepad-link-email">
-                            mallankgogri1@gmail.com
+                        <a href="mailto:mgogri@usc.edu" className="notepad-link-email">
+                            mgogri@usc.edu
                         </a>
                     </span>
                 </div>
                 <div className="contact-info-item">
+                    <span className="contact-info-label">Phone</span>
+                    <span className="contact-info-value"><a href="tel:+12132722623" className="notepad-link-email">+1 (213) 272 2623</a></span>
+                </div>
+                <div className="contact-info-item">
                     <span className="contact-info-label">Location</span>
-                    <span className="contact-info-value">Mumbai, India</span>
+                    <span className="contact-info-value">Los Angeles, CA</span>
                 </div>
                 <div className="contact-info-item">
                     <span className="contact-info-label">Availability</span>
@@ -36,8 +40,8 @@ export default function ContactSection() {
                         <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="notepad-link" title="LinkedIn" style={{ display: "flex", alignItems: "center", padding: "0.25rem" }}>
                             <Linkedin size={20} />
                         </a>
-                        <a href="https://twitter.com/mallankg" target="_blank" rel="noopener noreferrer" className="notepad-link" title="Twitter" style={{ display: "flex", alignItems: "center", padding: "0.25rem" }}>
-                            <Twitter size={20} />
+                        <a href="/MainResume.pdf" target="_blank" rel="noopener noreferrer" className="notepad-link" title="Resume" style={{ display: "flex", alignItems: "center", padding: "0.25rem" }}>
+                            <Download size={20} />
                         </a>
                     </div>
                 </div>
