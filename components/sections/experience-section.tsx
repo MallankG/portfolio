@@ -14,6 +14,19 @@ const experiences = [
         ],
         skills: "Python, Pandas, FastAPI, LangChain, Hugging Face, LSTM, FinBERT, Next.js, Zustand, WebSocket",
     },
+    {
+        year: "2025",
+        role: "Software Engineer Intern",
+        company: "Theta Sound",
+        period: "Feb 2025 – Jul 2025",
+        summary: "Built real-time stress detection and therapeutic sound systems using biometric signals, machine learning, and cloud technologies.",
+        bullets: [
+            "Conducted real-time stress detection using earbud biometric signals, including heart-rate data, with lightweight ML and on-device signal processing.",
+            "Architected a spatiotemporal learning algorithm in Python to model behavior patterns using time and location for context-aware task automation.",
+            "Designed a cloud-integrated event-driven system with Firebase Cloud Functions and Web Audio API for low-latency inference and automated therapeutic sound playback.",
+        ],
+        skills: "Python, TensorFlow Lite, Firebase Cloud Functions, Web Audio API, ML, Signal Processing",
+    },
 ];
 
 export default function ExperienceSection() {

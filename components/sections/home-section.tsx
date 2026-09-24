@@ -1,10 +1,13 @@
 "use client";
 
+import { Download, Linkedin } from "lucide-react";
+
 export default function HomeSection() {
     return (
-        <div className="notepad-section">
-            <h1 className="notepad-heading">Mallank Gogri</h1>
-            <p className="notepad-subheading">Software Engineer · AI/ML Builder · USC MS Computer Science</p>
+        <div className="notepad-section hero-section">
+            <p className="eyebrow">Software Engineer · AI/ML Builder · USC MS Computer Science</p>
+            <h1 className="notepad-heading hero-title">Mallank Gogri</h1>
+            <p className="notepad-subheading hero-subtitle hero-summary">Building reliable AI/ML systems, full-stack products, and research-driven developer tools.</p>
 
             <div className="notepad-divider" />
 
@@ -16,6 +19,17 @@ export default function HomeSection() {
                     research ideas into useful products, from real-time financial analytics to
                     computer vision and agentic workflows.
                 </p>
+            </div>
+
+            <div className="stat-grid" aria-label="Portfolio highlights">
+                <div className="stat-card"><span className="stat-number">1</span><span className="stat-label">Software engineering internship</span></div>
+                <div className="stat-card"><span className="stat-number">3</span><span className="stat-label">Full-stack and AI projects</span></div>
+                <div className="stat-card"><span className="stat-number">2</span><span className="stat-label">Research papers</span></div>
+            </div>
+
+            <div className="cta-row">
+                <a href="/MainResume.pdf" target="_blank" rel="noopener noreferrer" className="primary-link"><Download size={16} /> View resume</a>
+                <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="secondary-link"><Linkedin size={16} /> LinkedIn</a>
             </div>
 
             <div className="notepad-block">

@@ -1,0 +1,250 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e7] [cursor=pointer]: Click anywhere to skip
+    - generic [ref=e9]:
+      - generic [ref=e11]:
+        - paragraph [ref=e12]: Software Engineer · AI/ML Builder · USC MS Computer Science
+        - heading "Mallank Gogri" [level=1] [ref=e13]
+        - paragraph [ref=e14]: Building reliable AI/ML systems, full-stack products, and research-driven developer tools.
+        - generic [ref=e16]:
+          - heading "About Me" [level=2] [ref=e17]
+          - paragraph [ref=e18]: I'm a software engineer focused on building reliable, intelligent systems across AI/ML, full-stack applications, and developer tooling. I enjoy turning research ideas into useful products, from real-time financial analytics to computer vision and agentic workflows.
+        - generic "Portfolio highlights" [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: "1"
+            - generic [ref=e22]: Software engineering internship
+          - generic [ref=e23]:
+            - generic [ref=e24]: "3"
+            - generic [ref=e25]: Full-stack and AI projects
+          - generic [ref=e26]:
+            - generic [ref=e27]: "2"
+            - generic [ref=e28]: Research papers
+        - generic [ref=e29]:
+          - link "View resume" [ref=e30] [cursor=pointer]:
+            - /url: /MainResume.pdf
+          - link "LinkedIn" [ref=e34] [cursor=pointer]:
+            - /url: https://linkedin.com/in/mallankgogri
+        - generic [ref=e39]:
+          - heading "Quick Info" [level=2] [ref=e40]
+          - list [ref=e41]:
+            - listitem [ref=e42]: "– 📍 Location: Los Angeles, CA"
+            - listitem [ref=e43]: "– 🎓 Education: MS Computer Science, USC"
+            - listitem [ref=e44]: "– 💡 Focus: AI/ML, distributed systems, full-stack engineering"
+            - listitem [ref=e45]: "– 🚀 Status: Open to opportunities"
+        - generic [ref=e46]:
+          - heading "Hobbies" [level=2] [ref=e47]
+          - paragraph [ref=e48]: Research · Building products · Learning · Music · Gaming
+      - generic [ref=e50]:
+        - heading "Education" [level=1] [ref=e51]
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - heading "Master of Science in Computer Science" [level=3] [ref=e54]
+            - generic [ref=e55]: Aug 2026 – May 2028
+          - paragraph [ref=e56]: "@ University of Southern California, Los Angeles, CA"
+          - paragraph [ref=e57]: "Coursework: Analysis of Algorithms (CSCI-570), Database Systems (CSCI-585)"
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - heading "B.Tech in Information Technology, Honors in DevOps" [level=3] [ref=e60]
+            - generic [ref=e61]: Nov 2022 – May 2026
+          - paragraph [ref=e62]: "@ Dwarkadas J. Sanghvi College of Engineering, Mumbai, India"
+          - paragraph [ref=e63]: "CGPA: 9.05/10"
+      - generic [ref=e65]:
+        - heading "Skills" [level=1] [ref=e66]
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: "Languages:"
+            - generic [ref=e70]: Python, JavaScript, TypeScript, Java, C++, C, SQL
+          - generic [ref=e71]:
+            - generic [ref=e72]: "AI/ML:"
+            - generic [ref=e73]: PyTorch, LangChain, Hugging Face, scikit-learn, RAG, Generative AI
+          - generic [ref=e74]:
+            - generic [ref=e75]: "Frameworks:"
+            - generic [ref=e76]: FastAPI, Next.js, React, Node.js, Express.js
+          - generic [ref=e77]:
+            - generic [ref=e78]: "Databases:"
+            - generic [ref=e79]: PostgreSQL, MongoDB, Supabase, Redis, Pinecone
+          - generic [ref=e80]:
+            - generic [ref=e81]: "Cloud/DevOps & Tools:"
+            - generic [ref=e82]: AWS, Docker, GitHub Actions, Git, GitHub, VS Code, Cursor, Postman, Kaggle, Codex
+      - generic [ref=e84]:
+        - heading "Professional Experience" [level=1] [ref=e85]
+        - paragraph [ref=e86]: A record of the systems and engineering work shaping my practice in AI and software.
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - heading "Software Engineer Intern" [level=3] [ref=e89]
+            - generic [ref=e90]: Jul 2025 – Sept 2025
+          - paragraph [ref=e91]: "@ Quickyearning Pvt. Ltd."
+          - paragraph [ref=e92]: Built AI analytics and multi-agent stock prediction systems for real-time financial insights across NSE and BSE market data.
+          - list [ref=e93]:
+            - listitem [ref=e94]: – Built scalable AI analytics pipelines using Python, Pandas, and FastAPI, achieving 150ms P80 latency
+            - listitem [ref=e95]: – Developed a multi-agent stock prediction system using LangChain, Hugging Face, LSTM, and FinBERT
+            - listitem [ref=e96]: – Migrated modular React architecture to Next.js with SSR and replaced Redux with Zustand
+          - paragraph [ref=e97]: "Skills: Python, Pandas, FastAPI, LangChain, Hugging Face, LSTM, FinBERT, Next.js, Zustand, WebSocket"
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - heading "Software Engineer Intern" [level=3] [ref=e100]
+            - generic [ref=e101]: Feb 2025 – Jul 2025
+          - paragraph [ref=e102]: "@ Theta Sound"
+          - paragraph [ref=e103]: Built real-time stress detection and therapeutic sound systems using biometric signals, machine learning, and cloud technologies.
+          - list [ref=e104]:
+            - listitem [ref=e105]: – Conducted real-time stress detection using earbud biometric signals, including heart-rate data, with lightweight ML and on-device signal processing.
+            - listitem [ref=e106]: – Architected a spatiotemporal learning algorithm in Python to model behavior patterns using time and location for context-aware task automation.
+            - listitem [ref=e107]: – Designed a cloud-integrated event-driven system with Firebase Cloud Functions and Web Audio API for low-latency inference and automated therapeutic sound playback.
+          - paragraph [ref=e108]: "Skills: Python, TensorFlow Lite, Firebase Cloud Functions, Web Audio API, ML, Signal Processing"
+      - generic [ref=e110]:
+        - heading "Projects & Publications" [level=1] [ref=e111]
+        - generic [ref=e112]:
+          - heading "Projects" [level=2] [ref=e113]
+          - generic [ref=e114]:
+            - generic [ref=e115]:
+              - heading "Zirccle" [level=3] [ref=e116]
+              - generic [ref=e117]: Featured build
+            - paragraph [ref=e118]: Python · FastAPI · PostgreSQL · Redis · React Native · Expo · TypeScript · PyTorch · scikit-learn · Docker · AWS
+            - list [ref=e119]:
+              - listitem [ref=e120]: – Architected a FastAPI/PostgreSQL backend supporting 123 API operations across 101 paths and 36 database models/tables.
+              - listitem [ref=e121]: – Built Redis-backed worker queues to offload ML inference and analytics, load-testing the hosted API at 1,000 concurrent request slots with 176.6 req/sec and 5.16s P95 latency across 1,040 requests.
+              - listitem [ref=e122]: – Engineered a React Native/Expo networking layer with SWR/ETag caching, request coalescing, exponential backoff, optimistic updates, and CI request budgets of 2–4 calls per mobile journey.
+              - listitem [ref=e123]: – Developed PyTorch computer vision pipelines for garment classification and wardrobe intelligence using style and weather signals for personalized recommendations.
+            - link "GitHub" [ref=e125] [cursor=pointer]:
+              - /url: https://github.com/MallankG
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - heading "Puch.AI" [level=3] [ref=e131]
+              - generic [ref=e132]: Live product
+            - paragraph [ref=e133]: React · TypeScript · Node.js · Express · MongoDB · Google OAuth · Twilio · Groq AI · Vercel
+            - list [ref=e134]:
+              - listitem [ref=e135]: – Built an AI-driven email automation platform integrating Gmail OAuth and Groq AI to classify subscriptions and automate archiving, labelling, and personalized replies.
+              - listitem [ref=e136]: – Engineered four workflows for email parsing, daily summaries, OTP verification, and rule-based actions, integrating 5+ APIs with Node.js, Express, and MongoDB.
+            - generic [ref=e137]:
+              - link "GitHub" [ref=e138] [cursor=pointer]:
+                - /url: https://github.com/MallankG/puch-inbox-frontend
+              - link "Live project" [ref=e142] [cursor=pointer]:
+                - /url: https://puch-inbox.vercel.app/
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - heading "TravelEase" [level=3] [ref=e149]
+              - generic [ref=e150]: Academic project
+            - paragraph [ref=e151]: Next.js · TypeScript · Tailwind CSS · Flask · Shadcn/ui · Google Maps API · Amadeus API · Clerk
+            - list [ref=e152]:
+              - listitem [ref=e153]: – Built an intelligent travel planner using a Gemini multi-agent model to generate personalized itineraries from trip preferences.
+              - listitem [ref=e154]: – Integrated Amadeus API and Google Maps API for real-time cost data, destination discovery, and interactive trip visualization.
+              - listitem [ref=e155]: – Implemented the application with Next.js, TypeScript, Flask, Tailwind CSS, Shadcn/ui, and Clerk authentication.
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - heading "Studyhub" [level=3] [ref=e158]
+              - generic [ref=e159]: Education platform
+            - paragraph [ref=e160]: Next.js · Supabase · Gemini · pgvector · Shadcn/ui · Tailwind CSS
+            - list [ref=e161]:
+              - listitem [ref=e162]: – Built a full-stack study platform for college students with study materials, personalized plans, cross-semester doubt clearing, and a question-paper archive.
+              - listitem [ref=e163]: – Implemented multimodal RAG note summarization with Gemini and pgvector, alongside Supabase authentication and real-time data handling.
+            - link "GitHub" [ref=e165] [cursor=pointer]:
+              - /url: https://github.com/MallankG
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - heading "Privacy-Preserving Human Action Recognition" [level=3] [ref=e171]
+              - generic [ref=e172]: Research project
+            - paragraph [ref=e173]: Python · 2s-AGCN · Temporal Transformers · Graph Autoencoders · CLIP · NTU RGB+D
+            - list [ref=e174]:
+              - listitem [ref=e175]: – Designed a skeleton-based human action recognition framework using 3D joint coordinates instead of RGB imagery to support privacy-preserving inference.
+              - listitem [ref=e176]: – Combined Two-Stream Adaptive Graph Convolutional Networks, a joint-completion module for missing or low-confidence joints, and a Temporal Transformer for long-range dependencies.
+              - listitem [ref=e177]: – Explored CLIP-guided video-language graph convolution for zero-shot recognition on NTU RGB+D and Northwestern-UCLA datasets.
+            - link "GitHub" [ref=e179] [cursor=pointer]:
+              - /url: https://github.com/MallankG
+        - generic [ref=e183]:
+          - heading "Publications" [level=2] [ref=e184]
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - heading "Knowledge Graph Augmented Multilingual Benchmark for Factual LLM Evaluation" [level=3] [ref=e187]
+              - generic [ref=e188]: Accepted · MAI-2026
+            - paragraph [ref=e189]: Developing a multilingual benchmark for evaluating LLM factuality with knowledge graphs across Indic languages, domains, and real-world knowledge settings. Accepted for presentation at the 6th International Conference on Machine Vision & Augmented Intelligence (MAI-2026), with publication planned in Springer LNEE proceedings.
+            - paragraph [ref=e190]: "Tags: LLM Evaluation, Knowledge Graphs, Multilingual AI"
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - 'heading "FASAL: Ensemble Crop Recommendation System using Google Earth Engine and XAI Interpretability" [level=3] [ref=e193]'
+              - generic [ref=e194]: Published · IEEE
+            - paragraph [ref=e195]: Presents an ensemble-based crop recommendation framework leveraging Google Earth Engine and explainable AI to enable data-driven crop selection, improve model transparency, and support interpretable agricultural decisions.
+            - paragraph [ref=e196]: "Tags: ML, Agriculture, XAI"
+            - generic [ref=e197]:
+              - link "GitHub" [ref=e198] [cursor=pointer]:
+                - /url: https://github.com/MallankG/crop-recommendation-system
+              - link "Project" [ref=e202] [cursor=pointer]:
+                - /url: https://crop-recommendation-system-research.vercel.app/
+              - link "Paper" [ref=e207] [cursor=pointer]:
+                - /url: https://ieeexplore.ieee.org/document/11377206
+          - generic [ref=e211]:
+            - generic [ref=e212]:
+              - heading "Transfer Learning with Pretrained Convolutional Neural Networks for Lung Disease Classification" [level=3] [ref=e213]
+              - generic [ref=e214]: Research manuscript
+            - paragraph [ref=e215]: Developed a chest X-ray diagnostic classification system using transfer learning across pretrained CNN architectures including VGG, ResNet, EfficientNet, and InceptionV3, with systematic experimentation across classifier heads, optimizers, loss functions, input sizes, and hyperparameters.
+            - paragraph [ref=e216]: "Tags: Computer Vision, Transfer Learning, Medical AI"
+            - link "GitHub" [ref=e218] [cursor=pointer]:
+              - /url: https://github.com/MallankG/Lung-Disease-Classification
+      - generic [ref=e223]:
+        - heading "Achievements & Extracurriculars" [level=1] [ref=e224]
+        - generic [ref=e225]:
+          - heading "Achievements" [level=2] [ref=e226]
+          - list [ref=e227]:
+            - listitem [ref=e228]: "– Competitive Programming: CodeChef 1-star (1313)"
+            - listitem [ref=e229]:
+              - text: "– Google Cloud Skill Badges: Gemini for Cloud Architects, Prompt Design in Agent Platform, Responsible AI, Introduction to Responsible AI, Introduction to LLMs, and Introduction to Generative AI"
+              - link "Credly profile" [ref=e230] [cursor=pointer]:
+                - /url: https://www.credly.com/users/mallank-gogri
+            - listitem [ref=e231]:
+              - text: – Completed the ML x Generative AI '25 Program by Oxford Machine Learning School and AI for Global Goals
+              - link "Certificate" [ref=e232] [cursor=pointer]:
+                - /url: https://drive.google.com/file/d/1E3GPOxMkZRmA3EcWDe1css3rKhuMq1rx/view?usp=sharing
+            - listitem [ref=e233]: – Runner-up among 50+ teams at Techathon Hackathon, MCC College (2025)
+            - listitem [ref=e234]: – 6th place out of 400+ teams at TechFiesta Hackathon, Pune Institute of Computer Technology (2025)
+            - listitem [ref=e235]: – Member of Cohere Labs Open Science Community, contributing to research in large language models and applied AI
+        - generic [ref=e236]:
+          - heading "Positions of Responsibility" [level=2] [ref=e237]
+          - generic [ref=e238]:
+            - generic [ref=e239]:
+              - heading "Research Lead @ DJ InIT.ai" [level=3] [ref=e240]
+              - generic [ref=e241]: 2025–2026
+            - paragraph [ref=e242]: Led a 4-member research team in technical experimentation and publications
+          - generic [ref=e243]:
+            - generic [ref=e244]:
+              - heading "Marketing Head @ Google Developer Groups DJSCE" [level=3] [ref=e245]
+              - generic [ref=e246]: 2024–2025
+            - paragraph [ref=e247]: Led a 15-member team, secured INR 1 lakh+ in sponsorships, and helped organize a hackathon with 1,000+ registrations
+        - generic [ref=e248]:
+          - heading "Community" [level=2] [ref=e249]
+          - paragraph [ref=e250]: Member of Cohere Labs Open Science Community, contributing to research in large language models and applied AI.
+      - generic [ref=e252]:
+        - heading "Get In Touch" [level=1] [ref=e253]
+        - paragraph [ref=e254]: Open to internships, projects, and new opportunities — let's connect.
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - generic [ref=e257]: Email
+            - link "mgogri@usc.edu" [ref=e259] [cursor=pointer]:
+              - /url: mailto:mgogri@usc.edu
+          - generic [ref=e260]:
+            - generic [ref=e261]: Phone
+            - link "+1 (213) 272 2623" [ref=e263] [cursor=pointer]:
+              - /url: tel:+12132722623
+          - generic [ref=e264]:
+            - generic [ref=e265]: Location
+            - generic [ref=e266]: Los Angeles, CA
+          - generic [ref=e267]:
+            - generic [ref=e268]: Availability
+            - generic [ref=e269]: Open to opportunities
+          - generic [ref=e270]:
+            - generic [ref=e271]: Connect
+            - generic [ref=e272]:
+              - link "GitHub" [ref=e273] [cursor=pointer]:
+                - /url: https://github.com/mallankg
+              - link "LinkedIn" [ref=e277] [cursor=pointer]:
+                - /url: https://linkedin.com/in/mallankgogri
+              - link "Resume" [ref=e282] [cursor=pointer]:
+                - /url: /MainResume.pdf
+    - generic [ref=e288]:
+      - img "Home" [ref=e290] [cursor=pointer]
+      - generic [ref=e291] [cursor=pointer]
+      - img "Skills" [ref=e296] [cursor=pointer]
+      - img "Experience" [ref=e298] [cursor=pointer]
+      - img "Projects" [ref=e300] [cursor=pointer]
+      - img "Achievements" [ref=e302] [cursor=pointer]
+      - img "Contact" [ref=e304] [cursor=pointer]
+  - button "Open Next.js Dev Tools" [ref=e310] [cursor=pointer]
+  - alert [ref=e314]

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useCallback } from 'react';
+import { NotebookPen } from 'lucide-react';
 import MacOSDock from '../components/ui/mac-os-dock';
 import WelcomeAnimation from '../components/ui/welcome-animation';
 import {
@@ -23,7 +24,7 @@ const sampleApps = [
     {
         id: 'education',
         name: 'Education',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/notes-2021-05-28.png?rf=1024'
+        iconComponent: NotebookPen,
     },
     {
         id: 'skills',

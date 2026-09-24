@@ -6,7 +6,8 @@ import React, { useState, useRef, useCallback, useEffect } from 'react';
 interface DockApp {
   id: string;
   name: string;
-  icon: string;
+  icon?: string;
+  iconComponent?: React.ComponentType<{ size?: number; strokeWidth?: number }>;
 }
 
 interface MacOSDockProps {
@@ -319,17 +320,24 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
                   {app.name}
                 </div>
               )}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={app.icon}
-                alt={app.name}
-                width={scaledSize}
-                height={scaledSize}
-                className="object-contain"
-                style={{
-                  filter: `drop-shadow(0 ${scale > 1.2 ? Math.max(2, baseIconSize * 0.05) : Math.max(1, baseIconSize * 0.03)}px ${scale > 1.2 ? Math.max(4, baseIconSize * 0.1) : Math.max(2, baseIconSize * 0.06)}px rgba(0,0,0,${0.2 + (scale - 1) * 0.15}))`
-                }}
-              />
+              {app.iconComponent ? (
+                <app.iconComponent
+                  size={scaledSize}
+                  strokeWidth={1.8}
+                />
+              ) : (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={app.icon}
+                  alt={app.name}
+                  width={scaledSize}
+                  height={scaledSize}
+                  className="object-contain"
+                  style={{
+                    filter: `drop-shadow(0 ${scale > 1.2 ? Math.max(2, baseIconSize * 0.05) : Math.max(1, baseIconSize * 0.03)}px ${scale > 1.2 ? Math.max(4, baseIconSize * 0.1) : Math.max(2, baseIconSize * 0.06)}px rgba(0,0,0,${0.2 + (scale - 1) * 0.15}))`
+                  }}
+                />
+              )}
 
               {/* App Indicator Dot */}
               {openApps.includes(app.id) && (

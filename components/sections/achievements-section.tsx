@@ -1,10 +1,12 @@
 "use client";
 
 const achievements = [
-    "🏆 Google Cloud Skill Badges — Gemini for Cloud Architects, Prompt Design in Agent Platform, Responsible AI, and Introduction to LLMs",
-    "📚 ML x Generative AI '25 Program — Completed program by Oxford Machine Learning School & AI for Global Goals",
-    "🏆 Runner-Up at Techathon Hackathon — Among 50+ teams at MCC College (2025)",
-    "🎯 6th Place at TechFiesta Hackathon — Out of 400+ teams at Pune Institute of Computer Technology (2025)",
+    { text: "Competitive Programming: CodeChef 1-star (1313)" },
+    { text: "Google Cloud Skill Badges: Gemini for Cloud Architects, Prompt Design in Agent Platform, Responsible AI, Introduction to Responsible AI, Introduction to LLMs, and Introduction to Generative AI", link: "https://www.credly.com/users/mallank-gogri", linkLabel: "Credly profile" },
+    { text: "Completed the ML x Generative AI '25 Program by Oxford Machine Learning School and AI for Global Goals", link: "https://drive.google.com/file/d/1E3GPOxMkZRmA3EcWDe1css3rKhuMq1rx/view?usp=sharing", linkLabel: "Certificate" },
+    { text: "Runner-up among 50+ teams at Techathon Hackathon, MCC College (2025)" },
+    { text: "6th place out of 400+ teams at TechFiesta Hackathon, Pune Institute of Computer Technology (2025)" },
+    { text: "Member of Cohere Labs Open Science Community, contributing to research in large language models and applied AI" },
 ];
 
 const responsibilities = [
@@ -20,8 +22,6 @@ const responsibilities = [
         detail: "Led a 15-member team, secured INR 1 lakh+ in sponsorships, and helped organize a hackathon with 1,000+ registrations",
         period: "2024–2025",
     },
-    {
-    },
 ];
 
 export default function AchievementsSection() {
@@ -32,8 +32,11 @@ export default function AchievementsSection() {
             <div className="notepad-block">
                 <h2 className="notepad-label">Achievements</h2>
                 <ul className="notepad-list">
-                    {achievements.map((a, i) => (
-                        <li key={i}>{a}</li>
+                    {achievements.map((achievement) => (
+                        <li key={achievement.text}>
+                            {achievement.text}
+                            {achievement.link && <>{" "}<a href={achievement.link} target="_blank" rel="noopener noreferrer" className="inline-link">{achievement.linkLabel}</a></>}
+                        </li>
                     ))}
                 </ul>
             </div>
