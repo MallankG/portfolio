@@ -4,6 +4,7 @@ import React, { useRef, useCallback } from 'react';
 import { GraduationCap } from 'lucide-react';
 import MacOSDock from '../components/ui/mac-os-dock';
 import WelcomeAnimation from '../components/ui/welcome-animation';
+import StarsBackground from '../components/ui/stars-background';
 import {
     HomeSection,
     EducationSection,
@@ -83,8 +84,8 @@ const Portfolio: React.FC = () => {
             {/* Welcome Animation - shows on initial load */}
             <WelcomeAnimation />
 
-            {/* Ambient Dark Canvas Background */}
-            <div className="portfolio-bg" aria-hidden="true" />
+            {/* Interactive Space Starfield & Brandkit Atmospheric Canvas */}
+            <StarsBackground />
 
             {/* All Sections Content */}
             <div className="portfolio-content">

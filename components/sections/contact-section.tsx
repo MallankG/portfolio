@@ -40,10 +40,20 @@ export default function ContactSection() {
                     <div className="contact-channel-item">
                         <span className="contact-channel-label">
                             <Mail size={12} style={{ display: 'inline', marginRight: '4px' }} />
-                            Primary Email
+                            Primary Email (Academic)
                         </span>
                         <a href="mailto:mgogri@usc.edu" className="contact-channel-val">
                             mgogri@usc.edu
+                        </a>
+                    </div>
+
+                    <div className="contact-channel-item">
+                        <span className="contact-channel-label" style={{ color: '#06b6d4' }}>
+                            <Mail size={12} style={{ display: 'inline', marginRight: '4px' }} />
+                            Secondary Email (Personal)
+                        </span>
+                        <a href="mailto:mallankgogri1@gmail.com" className="contact-channel-val">
+                            mallankgogri1@gmail.com
                         </a>
                     </div>
 

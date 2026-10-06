@@ -47,10 +47,22 @@ const achievements = [
 
 const responsibilities = [
     {
+        role: "LE Tech & IT Support",
+        org: "University of Southern California (USC)",
+        period: "2026 – Present",
+        detail: "Managing learning environments, audiovisual systems, and technical IT operations across university classrooms and campus facilities.",
+    },
+    {
         role: "Research Lead",
         org: "DJ InIT.ai",
         period: "2025 – 2026",
         detail: "Led a 4-member research team in technical experimentation, model benchmarking, and peer-reviewed conference publications.",
+    },
+    {
+        role: "Vice President",
+        org: "DJS MUNSOC",
+        period: "2024 – 2025",
+        detail: "Directed executive committee operations, organized large-scale Model United Nations conferences, and mentored delegates in diplomacy and public speaking.",
     },
     {
         role: "Marketing Head",
