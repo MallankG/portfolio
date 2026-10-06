@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useCallback } from 'react';
-import { NotebookPen } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import MacOSDock from '../components/ui/mac-os-dock';
 import WelcomeAnimation from '../components/ui/welcome-animation';
 import {
@@ -24,7 +24,7 @@ const sampleApps = [
     {
         id: 'education',
         name: 'Education',
-        iconComponent: NotebookPen,
+        iconComponent: GraduationCap,
     },
     {
         id: 'skills',
@@ -79,15 +79,15 @@ const Portfolio: React.FC = () => {
     }, []);
 
     return (
-        <div className="notebook-page">
+        <div className="portfolio-page">
             {/* Welcome Animation - shows on initial load */}
             <WelcomeAnimation />
 
-            {/* Notebook Background */}
-            <div className="notebook-bg" aria-hidden="true" />
+            {/* Ambient Dark Canvas Background */}
+            <div className="portfolio-bg" aria-hidden="true" />
 
             {/* All Sections Content */}
-            <div className="notebook-content">
+            <div className="portfolio-content">
                 {sectionOrder.map((sectionId) => {
                     const SectionComponent = sectionComponents[sectionId];
                     return (
@@ -102,14 +102,8 @@ const Portfolio: React.FC = () => {
                 })}
             </div>
 
-            {/* The Dock Component */}
-            <div style={{
-                position: 'fixed',
-                bottom: '1rem',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                zIndex: 1000,
-            }}>
+            {/* The macOS Dock Component */}
+            <div className="dock-shell">
                 <MacOSDock
                     apps={sampleApps}
                     onAppClick={handleAppClick}

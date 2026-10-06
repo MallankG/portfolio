@@ -321,10 +321,26 @@ const MacOSDock: React.FC<MacOSDockProps> = ({
                 </div>
               )}
               {app.iconComponent ? (
-                <app.iconComponent
-                  size={scaledSize}
-                  strokeWidth={1.8}
-                />
+                <div
+                  style={{
+                    width: `${scaledSize}px`,
+                    height: `${scaledSize}px`,
+                    borderRadius: `${scaledSize * 0.22}px`,
+                    background: 'linear-gradient(145deg, #1e293b, #090d16)',
+                    border: '1px solid rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: `0 ${scale > 1.2 ? 8 : 4}px ${scale > 1.2 ? 16 : 8}px rgba(0, 0, 0, 0.45)`,
+                    color: '#34d399',
+                    transition: 'box-shadow 0.2s ease',
+                  }}
+                >
+                  <app.iconComponent
+                    size={Math.round(scaledSize * 0.58)}
+                    strokeWidth={1.8}
+                  />
+                </div>
               ) : (
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img

@@ -1,53 +1,131 @@
 "use client";
 
-import { Download, Linkedin } from "lucide-react";
+import { Download, Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 export default function HomeSection() {
     return (
-        <div className="notepad-section hero-section">
-            <p className="eyebrow">Software Engineer · AI/ML Builder · USC MS Computer Science</p>
-            <h1 className="notepad-heading hero-title">Mallank Gogri</h1>
-            <p className="notepad-subheading hero-subtitle hero-summary">Building reliable AI/ML systems, full-stack products, and research-driven developer tools.</p>
-
-            <div className="notepad-divider" />
-
-            <div className="notepad-block">
-                <h2 className="notepad-label">About Me</h2>
-                <p className="notepad-text">
-                    I&apos;m a software engineer focused on building reliable, intelligent systems
-                    across AI/ML, full-stack applications, and developer tooling. I enjoy turning
-                    research ideas into useful products, from real-time financial analytics to
-                    computer vision and agentic workflows.
-                </p>
+        <section className="section-container" aria-label="Introduction">
+            {/* Live Availability Status Pill */}
+            <div className="hero-status-pill">
+                <span className="status-pulse" aria-hidden="true" />
+                <span>Available for Summer/Fall 2026 roles · USC MS CS</span>
             </div>
 
-            <div className="stat-grid" aria-label="Portfolio highlights">
-                <div className="stat-card"><span className="stat-number">1</span><span className="stat-label">Software engineering internship</span></div>
-                <div className="stat-card"><span className="stat-number">3</span><span className="stat-label">Full-stack and AI projects</span></div>
-                <div className="stat-card"><span className="stat-number">2</span><span className="stat-label">Research papers</span></div>
+            {/* Hero Main Heading */}
+            <h1 className="hero-name">Mallank Gogri</h1>
+            <p className="hero-subtitle">
+                Software Engineer · AI/ML Systems Builder · USC Graduate Student
+            </p>
+            <p className="hero-summary">
+                I engineer high-performance distributed backends, computer vision pipelines,
+                and research-backed AI systems. Currently pursuing an MS in Computer Science
+                at the University of Southern California, with experience architecting low-latency
+                APIs, multi-agent LLM architectures, and real-time biometric inference.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="hero-actions">
+                <a
+                    href="/MainResume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                >
+                    <Download size={16} />
+                    <span>View Resume</span>
+                </a>
+                <a
+                    href="https://github.com/MallankG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                >
+                    <Github size={16} />
+                    <span>GitHub</span>
+                    <ArrowUpRight size={14} style={{ opacity: 0.6 }} />
+                </a>
+                <a
+                    href="https://linkedin.com/in/mallankgogri"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary"
+                >
+                    <Linkedin size={16} />
+                    <span>LinkedIn</span>
+                    <ArrowUpRight size={14} style={{ opacity: 0.6 }} />
+                </a>
+                <a
+                    href="mailto:mgogri@usc.edu"
+                    className="btn-secondary"
+                >
+                    <Mail size={16} />
+                    <span>Contact</span>
+                </a>
             </div>
 
-            <div className="cta-row">
-                <a href="/MainResume.pdf" target="_blank" rel="noopener noreferrer" className="primary-link"><Download size={16} /> View resume</a>
-                <a href="https://linkedin.com/in/mallankgogri" target="_blank" rel="noopener noreferrer" className="secondary-link"><Linkedin size={16} /> LinkedIn</a>
+            {/* Telemetry HUD Metric Grid */}
+            <div className="telemetry-grid" aria-label="Key engineering metrics">
+                <div className="telemetry-card">
+                    <div className="telemetry-header">
+                        <span>Architecture</span>
+                        <span className="accent">Scale</span>
+                    </div>
+                    <div className="telemetry-metric">
+                        123<span className="accent">+</span>
+                    </div>
+                    <div className="telemetry-desc">
+                        API operations & 36 models across 1,000 load-tested slots
+                    </div>
+                </div>
+
+                <div className="telemetry-card">
+                    <div className="telemetry-header">
+                        <span>Performance</span>
+                        <span className="accent">Latency</span>
+                    </div>
+                    <div className="telemetry-metric">
+                        150<span className="accent">ms</span>
+                    </div>
+                    <div className="telemetry-desc">
+                        P80 latency on streaming financial analytics pipelines
+                    </div>
+                </div>
+
+                <div className="telemetry-card">
+                    <div className="telemetry-header">
+                        <span>Scholarship</span>
+                        <span className="accent">Peer-Reviewed</span>
+                    </div>
+                    <div className="telemetry-metric">
+                        2<span className="accent">×</span>
+                    </div>
+                    <div className="telemetry-desc">
+                        Accepted / published research papers in IEEE & Springer LNEE
+                    </div>
+                </div>
             </div>
 
-            <div className="notepad-block">
-                <h2 className="notepad-label">Quick Info</h2>
-                <ul className="notepad-list">
-                    <li><span className="notepad-key">📍 Location:</span> Los Angeles, CA</li>
-                    <li><span className="notepad-key">🎓 Education:</span> MS Computer Science, USC</li>
-                    <li><span className="notepad-key">💡 Focus:</span> AI/ML, distributed systems, full-stack engineering</li>
-                    <li><span className="notepad-key">🚀 Status:</span> Open to opportunities</li>
-                </ul>
+            {/* Technical Specifications Grid */}
+            <div className="info-spec-grid" style={{ marginTop: '1.25rem' }}>
+                <div className="info-spec-item">
+                    <span className="info-spec-key">Current Program</span>
+                    <span className="info-spec-val">MS Computer Science · Univ. of Southern California</span>
+                </div>
+                <div className="info-spec-item">
+                    <span className="info-spec-key">Core Competencies</span>
+                    <span className="info-spec-val">Distributed Backends, PyTorch, Multi-Agent LLMs</span>
+                </div>
+                <div className="info-spec-item">
+                    <span className="info-spec-key">Location Base</span>
+                    <span className="info-spec-val">Los Angeles, CA · Open to Relocation</span>
+                </div>
+                <div className="info-spec-item">
+                    <span className="info-spec-key">Passions</span>
+                    <span className="info-spec-val">Research, High-Throughput Systems, Hackathons, Gaming</span>
+                </div>
             </div>
 
-            <div className="notepad-block">
-                <h2 className="notepad-label">Hobbies</h2>
-                <p className="notepad-text">
-                    Research · Building products · Learning · Music · Gaming
-                </p>
-            </div>
-        </div>
+            <div className="section-divider" style={{ marginTop: '2.5rem' }} />
+        </section>
     );
 }
