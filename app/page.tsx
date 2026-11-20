@@ -20,7 +20,7 @@ const sampleApps = [
     {
         id: 'home',
         name: 'Home',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/finder-2021-09-10.png?rf=1024'
+        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/finder-2021-09-10/1024.png'
     },
     {
         id: 'education',
@@ -30,27 +30,27 @@ const sampleApps = [
     {
         id: 'skills',
         name: 'Skills',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/terminal-2021-06-03.png?rf=1024'
+        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/terminal-2021-06-03/1024.png'
     },
     {
         id: 'experience',
         name: 'Experience',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/calendar-2021-04-29.png?rf=1024'
+        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/calendar-2021-04-29/1024.png'
     },
     {
         id: 'projects',
         name: 'Projects',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/photos-2021-05-28.png?rf=1024'
+        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/photos-2021-05-28/1024.png'
     },
     {
         id: 'achievements',
         name: 'Achievements',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/reminders-2021-05-28.png?rf=1024'
+        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/reminders-2021-05-28/1024.png'
     },
     {
         id: 'contact',
         name: 'Contact',
-        icon: 'https://cdn.jim-nielsen.com/macos/1024/mail-2021-05-25.png?rf=1024'
+        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/mail-2021-05-25/1024.png'
     }
 ];
 
