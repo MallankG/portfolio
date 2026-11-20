@@ -26,7 +26,7 @@ export default function HomeSection() {
             {/* Action Buttons */}
             <div className="hero-actions">
                 <a
-                    href="/MainResume.pdf"
+                    href="https://drive.google.com/file/d/12o4LB4kmitKOuLRYIqNSWX35xZf_Hn4T/view"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"
