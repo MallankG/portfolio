@@ -5,6 +5,13 @@ import { GraduationCap } from 'lucide-react';
 import MacOSDock from '../components/ui/mac-os-dock';
 import WelcomeAnimation from '../components/ui/welcome-animation';
 import StarsBackground from '../components/ui/stars-background';
+// Static imports so the dock icons get the Pages basePath prefix
+import finderIcon from '../public/dock/finder.png';
+import terminalIcon from '../public/dock/terminal.png';
+import calendarIcon from '../public/dock/calendar.png';
+import photosIcon from '../public/dock/photos.png';
+import remindersIcon from '../public/dock/reminders.png';
+import mailIcon from '../public/dock/mail.png';
 import {
     HomeSection,
     EducationSection,
@@ -20,7 +27,7 @@ const sampleApps = [
     {
         id: 'home',
         name: 'Home',
-        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/finder-2021-09-10/1024.png'
+        icon: finderIcon.src
     },
     {
         id: 'education',
@@ -30,27 +37,27 @@ const sampleApps = [
     {
         id: 'skills',
         name: 'Skills',
-        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/terminal-2021-06-03/1024.png'
+        icon: terminalIcon.src
     },
     {
         id: 'experience',
         name: 'Experience',
-        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/calendar-2021-04-29/1024.png'
+        icon: calendarIcon.src
     },
     {
         id: 'projects',
         name: 'Projects',
-        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/photos-2021-05-28/1024.png'
+        icon: photosIcon.src
     },
     {
         id: 'achievements',
         name: 'Achievements',
-        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/reminders-2021-05-28/1024.png'
+        icon: remindersIcon.src
     },
     {
         id: 'contact',
         name: 'Contact',
-        icon: 'https://cdn.jim-nielsen.com/icongallery/macos/mail-2021-05-25/1024.png'
+        icon: mailIcon.src
     }
 ];
 
